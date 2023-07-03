@@ -1,23 +1,37 @@
-  .cuerpo {
+   .cuerpo {
     margin: 0;
     padding: 0;
-    margin-left: 10%;
-    margin-right: 10%;
     background-image: url('../img/piramide.jpg');
+    font-family: Verdana, Geneva, sans-serif;
   }
   
-  header {
-    position: fixed;
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767px) {
+    video:not(.responsive-video) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  footer {
+     position: fixed; 
+    bottom: 0%;
     left: 0;
     width: 100%;
+    text-align: center;
     background-color: #f2f2f2;
+    ;
   }
-   
+   @media (max-width: 767px) {
+    footer {
+      position: static; 
+      /* font-size: 90% */
+    }
+  } 
   nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-  }
+     }
   
   nav li {
     display: inline;
@@ -29,119 +43,59 @@
     color: black;
     font-size: 120%;
   }
-  body main h1{
-    padding-top: 5%;
-    text-align: center;
+
+  .botella {
+    width: 50%;
+    height: auto;
   }
-  body main h2{
-    padding-top: 5%;
-    text-align: center;
+  
+  @media (max-width: 767px) {
+    .botella {
+      width: 100%; /* Ajusta el ancho al 100% en dispositivos móviles */
+    }
   }
 
-  .consulta{
-     position: absolute;
-    top: 30%;
-    left: 90%;
-    transform: translate(-50%, -50%); 
-    width: 20%;
-    height: 10%;
-     margin-right: 50%; 
+  @media (max-width: 767px) {
+    .textoresponsivo {
+      background-color: white; /* Fondo blanco en dispositivos móviles */
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 5%;
+    }
+  }
+  p{
+    text-align: justify;
+  }
+  .contenedor-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .contacto {
     background-color: #f2f2f2;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  input, textarea{
-    
-    box-sizing: border-box;
-    padding: 2%;
-    
-  }
-  body main section form{
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    /*height: 10%; */
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    
-  }
-  body main section form div {
-    margin-bottom: 10px;
-   
-  }
-  
-  body main section form label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  body main section form input,
- body main section  form textarea {
+    padding: 3%;
+    max-width: 30%;
     width: 100%;
-    padding: 5px;
   }
-  
-  body main section form input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  body main section form input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  .blanco {
-    padding-top: 3%;
-    color: white;
-  }
-  
-  .card-wine {
-    background: #f2f2f2;
-    padding: 1%;
-    margin-top: 3%;
-    margin-bottom: 5%;
-  }
-
-  .card-wine img{
-   
-    width: 50%;
-    height: 50%;
-  }
-  .card-wine2 {
-    margin-top: 5%;
-    text-align: center;
-    background: white;
-   
-  }
-
-  .card-wine2 img{
-   
-    width: 10%;
-    height: 10%;
-  }
-
-  .card-wine2 h4 {
-    padding-top: 1%;
-  }
-  
-  footer {
-    position: fixed;
-    bottom: 0%;
-    left: 0;
+  textarea {
     width: 100%;
-    text-align: center;
-    background-color: #f2f2f2;
   }
-
-  video{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-    border-radius: 5px;
+  
+  /* Estilos adicionales del formulario */
+  
+  @media (max-width: 768px) {
+    .contacto {
+      max-width: 70%;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contacto {
+      max-width: 90%;
+    }
   }
